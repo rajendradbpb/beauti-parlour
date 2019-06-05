@@ -15,7 +15,7 @@ var userSchema = new global.mongoose.Schema({
     lastName: { type: String },
     age: { type: Number },
     gender: { type: String,enum: [global.constants.gender.MALE,global.constants.gender.FEMALE] },
-    adhar: { type: String },
+    adhar: { type: String,unique:true },
 
     createdDate: {type: Date,default: new Date()},
     isDelete:{type:Boolean,default:false}
