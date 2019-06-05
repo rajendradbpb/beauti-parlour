@@ -2,10 +2,12 @@ var express = require('express');
 var router = express.Router();
 var indexController = require("./../indexController");
 var indexMiddleware = require("../indexMiddleware");
-router.post('/', indexMiddleware.shopMiddleware.preRegdPost, function (req, res, next) {
+
+// services
+router.post('/service', function (req, res, next) {
     indexController.shopController.addShop(req, res);
 });
-router.get('/', function (req, res, next) {
+router.get('/service', function (req, res, next) {
     indexController.shopController.getShop(req, res);
 });
 

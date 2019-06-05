@@ -14,11 +14,8 @@ var userSchema = new global.mongoose.Schema({
     firstName: { type: String },
     lastName: { type: String },
     age: { type: Number },
-    gender: { type: String,enum: ['male','female'], },
+    gender: { type: String,enum: [global.constants.gender.MALE,global.constants.gender.FEMALE] },
     adhar: { type: String },
-
-    // shop
-    shops: [{ type: Schema.Types.ObjectId, ref: 'role' }],
 
     createdDate: {type: Date,default: new Date()},
     isDelete:{type:Boolean,default:false}

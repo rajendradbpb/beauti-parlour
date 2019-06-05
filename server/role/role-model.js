@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 var roleSchema = new global.mongoose.Schema({
     type: {
         type: String, unique: true, trim: true,
-        enum: [global.constants.roles.ROLE_CHILD, global.constants.roles.ROLE_ADMIN]
+        enum: [global.constants.roles.ROLE_ADMIN, global.constants.roles.ROLE_SHOP, global.constants.roles.ROLE_USER]
     },
     api: [Schema.Types.Mixed],
     createdDate: { type: Date, default: new Date() },

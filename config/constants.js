@@ -1,6 +1,10 @@
 var config = require('config');
 var constants = {
   debug:true,
+  gender:{
+    MALE:"male",
+    FEMALE:"female",
+  },
   roles:{
     ROLE_ADMIN:"admin",
     ROLE_SHOP:"shop",
@@ -15,6 +19,7 @@ var constants = {
       "save"   : "Error in saving data",
       "get"   : "Error in fetch data",
       "invalidData" : "Invalid data", // generic
+      "invalidRole" : "Invalid Role", // generic
       "changePassword" : "Error in change password",
       "saveJob"   : "save Job Failure",
       "saveData"   :"save Data Error",
@@ -27,6 +32,7 @@ var constants = {
       "saveState":"error in saving state",
       "getState":"error in get state",
       "deleteState":"error in Delete state",
+      "shopOwnerNotFound":"shop owner not found",
       },
     success:{
       //global

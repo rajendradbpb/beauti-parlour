@@ -190,22 +190,22 @@ utility.uploadImage = function(imageDetail, callback) {
  * Make sure the the first , second,third must be present paramereres while calling this function
  * must be the req and the res object and rest are checked with the null validation
  */
-/* utility.validateNull = function() {
+ utility.validateNull = function() {
   var args = arguments;
   if (args.length < 3) {
     throw Error("Invalid paramereres supplied to  validation");
   }
-  console.log(args.length);
+  // console.log(args.length);
   for (var i in args) {
     if (i <= 2)
       continue; // skip the req and res object
     if (!args[0][args[2]][args[i]]) {
-      return response.sendResponse(args[1], 402, "error", constants.messages.errors.validationError, args[i] + " can not be blank");
+      return global.response.sendResponse(args[1], 402, "error", constants.messages.errors.validationError, args[i] + " can not be blank");
 
     }
 
   }
-} */
+} 
 
 /* utility.getAlphaNumeric = function(precision) {
   precision = precision || constants.forgotPasswordPrec;
