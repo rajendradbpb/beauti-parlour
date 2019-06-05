@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "a952103b-8e5f-4ea9-934f-a2f48dbb17b1",
+		"name": "beauti-parlour",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "role-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "role-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"type\":\"shop\",\n\t\"api\":[{\n\t\t\"name\":\"shop1\"\n\t\t\n\t}]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-admin-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"role\": [\"5cf7b172f4381f2748f11034\"],\n    \"username\": \"user1\",\n    \"password\": \"user1\",\n    \"email\": \"user1@gmail.com\",\n    \"mobile\": \"2222222222\",\n    \"firstName\": \"user1\",\n    \"lastName\": \"user1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth_login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"rajendra\",\n\t\"password\":\"rajendra\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth_loggedin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwiX2lkIjoiNWNhOWE4MzUzZTkwYTM1MWQ0YzM2MWMxIiwicG9wdWxhdGVkIjp7InJvbGUiOnsidmFsdWUiOiI1Y2E4Zjc0OWU5MmM2NzE0MDRjZTJlNGUiLCJvcHRpb25zIjp7InBhdGgiOiJyb2xlIiwiX2RvY3MiOnsiNWNhOWE4MzUzZTkwYTM1MWQ0YzM2MWMxIjoiNWNhOGY3NDllOTJjNjcxNDA0Y2UyZTRlIn0sImlzVmlydHVhbCI6ZmFsc2V9fX0sIndhc1BvcHVsYXRlZCI6ZmFsc2UsImFjdGl2ZVBhdGhzIjp7InBhdGhzIjp7Im1vYmlsZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJyb2xlIjoiaW5pdCIsImlzRGVsZXRlIjoiaW5pdCIsIl9fdiI6ImluaXQiLCJsYXN0TmFtZSI6ImluaXQiLCJmaXJzdE5hbWUiOiJpbml0IiwiZW1haWwiOiJpbml0IiwiX2lkIjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX192Ijp0cnVlLCJpc0RlbGV0ZSI6dHJ1ZSwibGFzdE5hbWUiOnRydWUsImZpcnN0TmFtZSI6dHJ1ZSwibW9iaWxlIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJyb2xlIjp0cnVlLCJfaWQiOnRydWV9LCJtb2RpZnkiOnt9LCJyZXF1aXJlIjp7fX0sInN0YXRlTmFtZXMiOlsicmVxdWlyZSIsIm1vZGlmeSIsImluaXQiLCJkZWZhdWx0IiwiaWdub3JlIl19LCJwYXRoc1RvU2NvcGVzIjp7fSwiZW1pdHRlciI6eyJfZXZlbnRzIjp7fSwiX2V2ZW50c0NvdW50IjowLCJfbWF4TGlzdGVuZXJzIjowfSwiJG9wdGlvbnMiOnRydWV9LCJpc05ldyI6ZmFsc2UsIl9kb2MiOnsiaXNEZWxldGUiOmZhbHNlLCJfX3YiOjAsImxhc3ROYW1lIjoidXNlcjEiLCJmaXJzdE5hbWUiOiJ1c2VyMSIsIm1vYmlsZSI6IjczNzcwNTY5NTMiLCJlbWFpbCI6ImVtYWlsIiwicGFzc3dvcmQiOiJwYmtkZjIkMTAwMDAkYjAwMjU4ZmY2ZTIzYzg5N2I5ZGNiN2JmYjdhZDdlODY3NjY3YzEyMTI1MjU5NWMyZDZiNjEwNWQ2NThlMTE3NTQxODQ0YmRkNjM1NWM2ZTAwMGViYzljZGU2ZjY1MDFlNGZlMzVhOThmMGRkNzQyYjJmNTUzNzViNDJjZGVkYjEkOWIyNTA3Y2RkOTkyZWMyN2FkMzI2MTVmZmRlYjBhMDlmMWRhMGU3NmNlNGNkZjEyMDIwODI2N2ZiYmEyNThlZDEzMzViNDc4M2ZhZWIwNmE3YjdjMjljOTVjMDdjOWIxMTNiNGQ3MjcwYWRjYmU0OGFiNDZiZWU1OTZjNjZmYzkiLCJ1c2VybmFtZSI6InVzZXIxIiwicm9sZSI6eyJfaWQiOiI1Y2E4Zjc0OWU5MmM2NzE0MDRjZTJlNGUiLCJ0eXBlIjoiYWRtaW4xIiwiX192IjowLCJpc0RlbGV0ZSI6ZmFsc2UsImNyZWF0ZWREYXRlIjoiMjAxOS0wNC0wNlQxOTowMDoxMC45MzdaIiwiYXBpIjpbeyJuYW1lIjoibmFtZTEifV19LCJfaWQiOiI1Y2E5YTgzNTNlOTBhMzUxZDRjMzYxYzEifSwiJGluaXQiOnRydWUsImlhdCI6MTU1NDYzMDI0MywiZXhwIjoxNTU0NzE2NjQzfQ.EKcIsiUojycKSZhLRNW51JMEwyyEaGe_LkhVctoLRF0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwiX2lkIjoiNWNhOWE4MzUzZTkwYTM1MWQ0YzM2MWMxIiwicG9wdWxhdGVkIjp7InJvbGUiOnsidmFsdWUiOiI1Y2E4Zjc0OWU5MmM2NzE0MDRjZTJlNGUiLCJvcHRpb25zIjp7InBhdGgiOiJyb2xlIiwiX2RvY3MiOnsiNWNhOWE4MzUzZTkwYTM1MWQ0YzM2MWMxIjoiNWNhOGY3NDllOTJjNjcxNDA0Y2UyZTRlIn0sImlzVmlydHVhbCI6ZmFsc2V9fX0sIndhc1BvcHVsYXRlZCI6ZmFsc2UsImFjdGl2ZVBhdGhzIjp7InBhdGhzIjp7Im1vYmlsZSI6ImluaXQiLCJwYXNzd29yZCI6ImluaXQiLCJ1c2VybmFtZSI6ImluaXQiLCJyb2xlIjoiaW5pdCIsImlzRGVsZXRlIjoiaW5pdCIsIl9fdiI6ImluaXQiLCJsYXN0TmFtZSI6ImluaXQiLCJmaXJzdE5hbWUiOiJpbml0IiwiZW1haWwiOiJpbml0IiwiX2lkIjoiaW5pdCJ9LCJzdGF0ZXMiOnsiaWdub3JlIjp7fSwiZGVmYXVsdCI6e30sImluaXQiOnsiX192Ijp0cnVlLCJpc0RlbGV0ZSI6dHJ1ZSwibGFzdE5hbWUiOnRydWUsImZpcnN0TmFtZSI6dHJ1ZSwibW9iaWxlIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGFzc3dvcmQiOnRydWUsInVzZXJuYW1lIjp0cnVlLCJyb2xlIjp0cnVlLCJfaWQiOnRydWV9LCJtb2RpZnkiOnt9LCJyZXF1aXJlIjp7fX0sInN0YXRlTmFtZXMiOlsicmVxdWlyZSIsIm1vZGlmeSIsImluaXQiLCJkZWZhdWx0IiwiaWdub3JlIl19LCJwYXRoc1RvU2NvcGVzIjp7fSwiZW1pdHRlciI6eyJfZXZlbnRzIjp7fSwiX2V2ZW50c0NvdW50IjowLCJfbWF4TGlzdGVuZXJzIjowfSwiJG9wdGlvbnMiOnRydWV9LCJpc05ldyI6ZmFsc2UsIl9kb2MiOnsiaXNEZWxldGUiOmZhbHNlLCJfX3YiOjAsImxhc3ROYW1lIjoidXNlcjEiLCJmaXJzdE5hbWUiOiJ1c2VyMSIsIm1vYmlsZSI6IjczNzcwNTY5NTMiLCJlbWFpbCI6ImVtYWlsIiwicGFzc3dvcmQiOiJwYmtkZjIkMTAwMDAkYjAwMjU4ZmY2ZTIzYzg5N2I5ZGNiN2JmYjdhZDdlODY3NjY3YzEyMTI1MjU5NWMyZDZiNjEwNWQ2NThlMTE3NTQxODQ0YmRkNjM1NWM2ZTAwMGViYzljZGU2ZjY1MDFlNGZlMzVhOThmMGRkNzQyYjJmNTUzNzViNDJjZGVkYjEkOWIyNTA3Y2RkOTkyZWMyN2FkMzI2MTVmZmRlYjBhMDlmMWRhMGU3NmNlNGNkZjEyMDIwODI2N2ZiYmEyNThlZDEzMzViNDc4M2ZhZWIwNmE3YjdjMjljOTVjMDdjOWIxMTNiNGQ3MjcwYWRjYmU0OGFiNDZiZWU1OTZjNjZmYzkiLCJ1c2VybmFtZSI6InVzZXIxIiwicm9sZSI6eyJfaWQiOiI1Y2E4Zjc0OWU5MmM2NzE0MDRjZTJlNGUiLCJ0eXBlIjoiYWRtaW4xIiwiX192IjowLCJpc0RlbGV0ZSI6ZmFsc2UsImNyZWF0ZWREYXRlIjoiMjAxOS0wNC0wNlQxOTowMDoxMC45MzdaIiwiYXBpIjpbeyJuYW1lIjoibmFtZTEifV19LCJfaWQiOiI1Y2E5YTgzNTNlOTBhMzUxZDRjMzYxYzEifSwiJGluaXQiOnRydWUsImlhdCI6MTU1NDYyNzc2NiwiZXhwIjoxNTU0NzE0MTY2fQ.qEx62okgb7N7ZoFh6G2ogU5wtVXbS8bU3-R5-Q2otSQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/auth/loggedin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"loggedin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-child-POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n   \n    \n    \"mobile\": \"1111111111\",\n    \"age\": \"10\",\n    \"school\": \"school\",\n    \"grade\": \"grade\",\n    \"gender\": \"male\"\n    \n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/child",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"child"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-child?mobile=1111111112",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/child?mobile=1111111112",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"child"
+					],
+					"query": [
+						{
+							"key": "mobile",
+							"value": "1111111112"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-child",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/child",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"child"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shop-save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"owner\":\"5cf7b1bcf4381f2748f11036\",\n\t\"shopName\":\"\",\n\t\"landmark\":\"\",\n\t\"city\":\"\",\n\t\"services\":[{\n\t\t\"name\":\"hairCUt\",\n\t\t\"price\":\"100\"\n\t}],\n\t\"facilities\":[\"fac1\"]\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
